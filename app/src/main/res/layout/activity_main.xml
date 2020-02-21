@@ -8,14 +8,52 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:id="@+id/mainLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="242dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        </RelativeLayout>
+            <ImageView
+                android:id="@+id/QcImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:contentDescription="Québec"
+                app:srcCompat="@drawable/qcFlag" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="107dp"
+                app:srcCompat="@drawable/profilePic" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                app:srcCompat="@drawable/signature" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
