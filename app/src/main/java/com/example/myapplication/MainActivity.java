@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.Console;
 
@@ -17,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void myFunction(View v)
     {
-        int i = 1;
+        EditText editPrenom = findViewById(R.id.edtxtNom);
+        TextView prenom = findViewById(R.id.txtPrenomCitoyen);
+
+        prenom.setText(editPrenom.getText());
+
     }
 }
