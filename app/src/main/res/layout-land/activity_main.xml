@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="239dp"
+        android:baselineAligned="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/imagesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/QcImageView"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:contentDescription="Québec"
+                app:srcCompat="@drawable/qc_flag" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="107dp"
+                app:srcCompat="@drawable/profile_pic" />
+
+            <ImageView
+                android:id="@+id/signature"
+                android:layout_width="150dp"
+                android:layout_height="150px"
+                android:paddingBottom="0dp"
+                app:srcCompat="@drawable/signature" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtPermisDeConduire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Permis De Conduire" />
+
+            <TextView
+                android:id="@+id/txtNoPermisDeConduire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="@string/numeroPermis"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrenomCitoyen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prenom_sitoyen" />
+
+            <TextView
+                android:id="@+id/txtNomCitoyen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nom_citoyen" />
+
+            <TextView
+                android:id="@+id/txtDDN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ddn" />
+
+            <TextView
+                android:id="@+id/txtAdresse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adresse" />
+
+            <TextView
+                android:id="@+id/txtSexe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sexe" />
+
+            <TextView
+                android:id="@+id/txtClasse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/classe" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="419dp"
+        android:paddingLeft="10dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="311dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom" />
+
+            <EditText
+                android:id="@+id/edtxtNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prenom" />
+
+            <EditText
+                android:id="@+id/edTxtPrenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="myFunction"
+                android:text="Button" />
+
+            <Switch
+                android:id="@+id/genderSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                android:textOff="F"
+                android:textOn="M" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="hideSignature"
+                android:text="Signature" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
+</ScrollView>
